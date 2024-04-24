@@ -1,8 +1,17 @@
-alert('Hello world');
-
-
-let favoritefood = 'Tajine of rabbit fresh coriander and lemon confit';
-
-document.write(favoritefood);
-
-
+let pokemonList = [
+    {
+        name: "Pikachu",
+        height: 4,
+        types: ["electric"]
+    },
+    {
+        name: "Charmander",
+        height: 6,
+        types: ["fire"]
+    },
+    {
+        name: "Squirtle",
+        height: 5,
+        types: ["water"]
+    }
+];
