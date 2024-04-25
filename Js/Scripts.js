@@ -15,3 +15,19 @@ let pokemonList = [
         types: ["water"]
     }
 ];
+
+console.log(pokemonList);
+
+const threshold = 1.0;
+for (let i = 0; i < pokemonList.length; i++) {
+   
+    let pokemon = pokemonList[i];
+    
+
+    document.write(`${pokemon.name} (height: ${pokemon.height})`);
+
+    if (pokemon.height > threshold) {
+        
+        document.write(` - Wow, that's big!`);
+    }
+}
