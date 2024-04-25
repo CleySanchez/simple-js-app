@@ -1,11 +1,11 @@
 let pokemonList = [
     {
-        name: "Pikachu",
-        height: 4,
+        name: "Pikachu ",
+        height: 2,
         types: ["electric"]
     },
     {
-        name: "Charmander",
+        name: "Charmander ",
         height: 6,
         types: ["fire"]
     },
@@ -18,16 +18,13 @@ let pokemonList = [
 
 console.log(pokemonList);
 
-const threshold = 1.0;
+
 for (let i = 0; i < pokemonList.length; i++) {
-   
-    let pokemon = pokemonList[i];
+    const pokemon = pokemonList[i];
     
-
     document.write(`${pokemon.name} (height: ${pokemon.height})`);
-
-    if (pokemon.height > threshold) {
-        
-        document.write(` - Wow, that's big!`);
+    
+    if (pokemon.height > 5) { 
+        document.write(" - Wow, that's big!"); 
     }
 }
