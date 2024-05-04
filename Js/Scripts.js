@@ -1,4 +1,4 @@
-// Wrap pokemonList array in an IIFE to avoid global state access
+// Wrap pokemonRepository array in an IIFE to avoid global state access
 let pokemonRepository = (function() {
     // Initialize an empty array to store Pokémon objects
     let pokemonList = [
@@ -26,17 +26,20 @@ let pokemonRepository = (function() {
         },
         add: function(pokemon) {
             pokemonList.push(pokemon);
+        },
+        addListItem: function(pokemon) {
+            // Create a button for each Pokemon
+            const button = document.createElement('button');
+            button.innerText = pokemon.name;
+            document.body.appendChild(button);
+
+            // Add event listener to each button
+            button.addEventListener('click', function() {
+                showDetails(pokemon);
+            });
         }
     };
 })();
-
-// Use a forEach() loop to iterate over the Pokémon in the pokemonList array and print their details
-pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(`${pokemon.name} (height: ${pokemon.height})`);
-    if (pokemon.height > 5) { 
-        document.write(" - Wow, that's big!"); 
-    }
-});
 
 // Function to print a message
 function printMessage() {
@@ -46,3 +49,13 @@ function printMessage() {
 // Call the printMessage function
 printMessage();
 
+// Function to show Pokemon details
+function showDetails(pokemon) {
+    console.log(pokemon);
+}
+
+// Use a forEach() loop to iterate over the Pokémon in the pokemonList array and print their details
+pokemonRepository.getAll().forEach(function(pokemon) {
+    // Call addListItem function for each Pokemon
+    pokemonRepository.addListItem(pokemon);
+});
