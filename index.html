@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Simple JS App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
   </head>
   <body>
-    <div id="wrapper">
-      <div id="image-wrapper">
-          <img id="image" src="" alt="" />
+    <div id="app-wrapper">
+      <div id="pokemon-details">
+        <div id="pokemon-name"></div>
+        <div id="pokemon-height"></div>
       </div>
-      <div id="header">
-          <div id="number"></div>
-          <div id="name"></div>
+      <div id="button-wrapper">
+        <button id="fetch-button">Get other Pokemon !</button>
       </div>
-      <div id="button">Get other Pokemon !</div>
-    
-      <ul class="pokemon-list"></ul>
+      <ul class="pokemon-list">
+        <!-- List items will be dynamically added here -->
+      </ul>
     </div>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>

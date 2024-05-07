@@ -1,3 +1,7 @@
+
+
+
+
 let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -17,8 +21,11 @@ let pokemonRepository = (function () {
                 return response.json();
             })
             .then(function(details) {
+                // Assigning details to the Pokémon object
                 pokemon.imgUrl = details.sprites.front_default;
                 pokemon.height = details.height;
+                pokemon.imgUrlFront = details.sprites.front_default;
+                pokemon.imgUrlBack = details.sprites.back_default;
             })
             .catch(function(e) {
                 console.error(e);
@@ -31,7 +38,19 @@ let pokemonRepository = (function () {
         button.innerText = pokemon.name;
         button.classList.add('pokemon-button');
         listItem.appendChild(button);
+
+        let imgFront = document.createElement('img');
+        imgFront.src = pokemon.imgUrlFront;
+        imgFront.classList.add('pokemon-image');
+        listItem.appendChild(imgFront);
+
+        let imgBack = document.createElement('img');
+        imgBack.src = pokemon.imgUrlBack;
+        imgBack.classList.add('pokemon-image');
+        listItem.appendChild(imgBack);
+
         document.querySelector('.pokemon-list').appendChild(listItem);
+
         button.addEventListener('click', function() {
             showDetails(pokemon);
         });
@@ -44,6 +63,7 @@ let pokemonRepository = (function () {
             })
             .then(function(json) {
                 json.results.forEach(function(item) {
+                    // Create a Pokémon object and add it to the list
                     let pokemon = {
                         name: item.name,
                         detailsUrl: item.url
@@ -57,6 +77,7 @@ let pokemonRepository = (function () {
     }
 
     function showDetails(pokemon) {
+        // Call loadDetails to fetch more details
         loadDetails(pokemon).then(function() {
             console.log(pokemon);
         });
@@ -72,8 +93,11 @@ let pokemonRepository = (function () {
     };
 })();
 
+// Load the list and then add list items
 pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function(pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
 });
+
+
