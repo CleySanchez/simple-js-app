@@ -97,8 +97,8 @@ body {
     background-color: #0056b3;
 }
 
-.pokemon-image {
-    width: 80px; /* Adjust the width as needed */
+img {
+    width: 450px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure images are displayed as block elements */
     margin-bottom: 10px; /* Add some space between each image */
