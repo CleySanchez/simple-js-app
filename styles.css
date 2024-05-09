@@ -1,9 +1,3 @@
-* { 
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    font-family:sans-serif;
-}
 
   body {
     display: flex;
@@ -75,7 +69,7 @@
   /* Button styles */
   .pokemon-button {
     background-color: #f0e5e4; /* Red background color */
-    color: rgb(0, 0, 0); /* White text color */
+    color: rgb(255, 0, 0); /* White text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding around the text */
     font-size: 16px; /* Font size */

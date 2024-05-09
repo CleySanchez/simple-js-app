@@ -21,13 +21,15 @@
     }
   });
 
-  modalClose.addEventListener('click', hideModal);
+ 
 
   modalContainer.addEventListener('click', function(e) {
     if (e.target === modalContainer) {
       hideModal();
     }
   });
+
+ modalClose.addEventListener('click', hideModal);
 
   let pokemonRepository = (function() {
     let pokemonList = [];
@@ -54,7 +56,7 @@
     }
 
     function addListItem(pokemon) {
-      let listItem = document.createElement('li');
+      let listItem = document.createElement('ul');
       let button = document.createElement('button');
       button.innerText = pokemon.name;
       button.classList.add('pokemon-button');
@@ -107,7 +109,9 @@
   pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function(pokemon) {
       pokemonRepository.addListItem(pokemon);
+      
     });
   });
 
 })();
+

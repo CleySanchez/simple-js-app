@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon Modal</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="simple.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 </head>
 
 <div id="modal-container" class="modal-container">
-    <div class="modal" id="modal">
-      <button class="modal-close" id="modal-close">✕</button>
-      <div class="modal-content" id="modal-content">
-        <h1 id="modal-title"></h1>
-        <div id="modal-text"></div>
-      </div>
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-content" id="modal-content">
+      <h1 id="modal-title"></h1>
+      <div id="modal-text"></div>
     </div>
   </div>
+</div>
 
 <body>
-    
-  <ul class="pokemon-list"></ul> </ul>
 
-   <script src="js/promise-polyfill.js"></script>
+  <ul class="pokemon-list"></ul>
+
+  <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
-  <script src="js/scripts.js"></script></script>
+  <script src="js/scripts.js"></script>
 </body>
+
 </html>
