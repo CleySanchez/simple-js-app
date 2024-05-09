@@ -56,7 +56,8 @@
     }
 
     function addListItem(pokemon) {
-      let listItem = document.createElement('ul');
+      let listItem = document.createElement('li');
+  
       let button = document.createElement('button');
       button.innerText = pokemon.name;
       button.classList.add('pokemon-button');

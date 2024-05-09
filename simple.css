@@ -7,8 +7,38 @@ body {
 
 .pokemon-list {
   list-style: none;
+  width: 100px;
   padding: 0;
+  text-align: center;
+  display: inline-block;
 }
+
+.poketitle {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(21, 21, 43);
+}
+
+.poke {
+  display: inline-block;
+  width: calc(50% - 55px);
+
+}
+
+.pokemon-button {
+  text-align: center;
+width: 100px;
+border-radius: 5px;
+margin-bottom: 1px;
+cursor: pointer;
+}
+
+.pokemon-button:hover {
+  color: red;
+  background-color: rgba(95, 158, 160, 0.422)
+}
+
+
 
 .modal-container {
   display: none;
@@ -21,6 +51,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 .modal {
   background-color: white;
