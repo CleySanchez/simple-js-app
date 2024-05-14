@@ -1,78 +1,78 @@
 /* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .pokemon-list {
-  list-style: none;
-  width: 100px;
-  padding: 0;
-  text-align: center;
-  display: inline-block;
+    list-style: none;
+    width: 100px;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
 }
 
 .poketitle {
-  text-align: center;
-  font-size: 24px;
-  color: rgb(21, 21, 43);
+    text-align: center;
+    font-size: 24px;
+    color: rgb(21, 21, 43);
 }
 
 .poke {
-  display: inline-block;
-  width: calc(50% - 55px);
+    display: inline-block;
+    width: calc(50% - 55px);
 
 }
 
 .pokemon-button {
-  text-align: center;
-width: 100px;
-border-radius: 5px;
-margin-bottom: 1px;
-cursor: pointer;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
 }
 
 .pokemon-button:hover {
-  color: red;
-  background-color: rgba(95, 158, 160, 0.422)
+    color: red;
+    background-color: rgba(95, 158, 160, 0.422)
 }
 
 
 
 .modal-container {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
-.modal {
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 80%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
+/* .modal { */
+/*   background-color: white; */
+/*   border-radius: 5px; */
+/*   padding: 20px; */
+/*   max-width: 80%; */
+/*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+/* } */
 
 .modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .modal-content {
-  text-align: center;
+    text-align: center;
 }
 
 

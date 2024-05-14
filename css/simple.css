@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -46,9 +46,74 @@ body {
 
 
 /* For mobile devices */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .modal {
     max-width: 90%;
   }
+}
+ */ 
+
+ /* simple.css */
+
+/* Adjusting modal header */
+.modal-header {
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #dee2e6; /* Gray border bottom */
+}
+
+/* Adjusting modal title */
+.modal-title {
+  color: #ff0000; /* Black title color */
+}
+
+/* Adjusting modal body */
+.modal-body {
+  padding: 1.5rem; /* Padding around modal body content */
+}
+
+/* Adjusting modal footer */
+.modal-footer {
+  justify-content: center; /* Centering modal footer buttons */
+}
+
+/* Adjusting modal button */
+.btn-secondary {
+  background-color: #6c757d; /* Gray background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+}
+
+/* Adjusting close button */
+.btn-close {
+  color: #000; /* Black close button color */
+  opacity: 1; /* Full opacity for close button */
+}
+
+/* Adjusting header */
+.header {
+  background-color: #0d6efd; /* Bootstrap primary color for header */
+  color: #fff; /* White text color */
+}
+
+/* Adjusting search input */
+.form-control-dark {
+  border-radius: 0; /* Remove border radius */
+  border: none; /* Remove border */
+}
+
+/* Adjusting main container */
+.container {
+  padding-top: 2rem; /* Top padding */
+}
+
+/* Adjusting list group */
+.list-group {
+  border: none; /* No border */
+}
+
+/* Adjusting list group item */
+.list-group-item {
+  border: none; /* No border */
+  cursor: pointer; /* Cursor pointer on hover */
 }
 
