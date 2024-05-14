@@ -1,105 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { 
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    font-family:sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-#app-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-#pokemon-details {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-#pokemon-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#pokemon-height {
-    font-size: 16px;
-}
-
-#button-wrapper {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#fetch-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure full height of the viewport */
+  }
+  /* Modal container styles */
+  #modal-container.modal-container {
+    display: flex; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure modal is on top of other content */
+    overflow: auto; /* Enable scrolling when modal content exceeds viewport */
+  }
+  
+  /* Modal styles */
+  #modal.modal {
+    background-color: rgb(119, 22, 22);
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#fetch-button:hover {
-    background-color: #45a049;
-}
-
-.pokemon-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.pokemon-item {
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.pokemon-name {
+    max-width: 80%;
+    margin: 10% auto; /* Center modal vertically and horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modal content styles */
+  #modal-content.modal-content {
+    text-align: center;
+  }
+  
+  /* Close button styles */
+  button#modal.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.pokemon-height {
-    font-size: 14px;
-}
-
-.pokemon-button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+  }
+  
+  /* Button styles */
+  .pokemon-button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* No border */
+    color: white; /* White text color */
+    padding: 15px 32px; /* Padding around the text */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin between buttons */
+    cursor: pointer; /* Cursor style */
+    border-radius: 12px; /* Rounded corners */
+  }
+  
+  /* Button hover effect */
+  .pokemon-button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+  }
+  
 
-.pokemon-button:hover {
-    background-color: #0056b3;
-}
+  
+  /* Button styles */
+  .pokemon-button {
+    background-color: #f0e5e4; /* Red background color */
+    color: rgb(0, 0, 0); /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+  }
+  
+  /* Button hover effect */
+  .pokemon-button:hover {
+    background-color: #1f0505; /* Darker red background color on hover */
+  }
 
-img {
-    width: 450px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure images are displayed as block elements */
-    margin-bottom: 10px; /* Add some space between each image */
-}
+   /* For mobile devices */
+   @media only screen and (max-width: 600px) {
+    .modal {
+      max-width: 90%;
+    }
+  }
