@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-let pokemonRepository = (function () {
-  let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=151";
-
-  async function add(pokemon) {
-    pokemonList.push(pokemon);
-  }
-
-  function getAll() {
-    return pokemonList;
-  }
-
-  async function loadDetails(pokemon) {
-    let url = pokemon.detailsUrl;
-    try {
-      const response = await fetch(url);
-      const details = await response.json();
-      pokemon.imgUrl = details.sprites.front_default;
-      pokemon.height = details.height;
-    } catch (error) {
-      console.error(error);
-=======
 (function() {
   const modalContainer = document.querySelector('#modal-container');
   const modal = document.querySelector('#modal');
@@ -200,5 +177,3 @@ pokemonRepository.loadList().then(function () {
   });
 
 })();
-
->>>>>>> c51df3228bc479bab33773b94d66561cd8eef3e5
