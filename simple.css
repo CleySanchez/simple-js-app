@@ -15,7 +15,7 @@ body {
 
 .poketitle {
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   color: rgb(21, 21, 43);
 }
 
@@ -76,9 +76,9 @@ cursor: pointer;
 }
 
 
-/* For mobile devices */
+/* For mobile devices
 @media only screen and (max-width: 600px) {
   .modal {
     max-width: 90%;
   }
-}
+} */

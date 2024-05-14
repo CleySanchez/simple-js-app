@@ -8,7 +8,7 @@
   function showModal(title, text) {
     modalTitle.textContent = title;
     modalText.innerHTML = text;
-    modalContainer.style.display = 'flex';
+    // // modalContainer.style.display = 'flex';
   }
 
   function hideModal() {
@@ -85,6 +85,8 @@
         console.error(error);
       }
     }
+
+    
 
     async function showDetails(pokemon) {
       await loadDetails(pokemon);
