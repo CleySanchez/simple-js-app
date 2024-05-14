@@ -55,15 +55,24 @@ body {
 
  /* simple.css */
 
+ /* Custom.css */
+
+/* Your variable overrides */
+$body-bg: #001;
+$body-color: #111;
+
+/* Bootstrap and its default variables */
+@import "node_modules/bootstrap/scss/bootstrap";
+
 /* Adjusting modal header */
 .modal-header {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #407cb8; /* Light gray background */
   border-bottom: 1px solid #dee2e6; /* Gray border bottom */
 }
 
 /* Adjusting modal title */
 .modal-title {
-  color: #ff0000; /* Black title color */
+  color: #ca2727; /* Black title color */
 }
 
 /* Adjusting modal body */
