@@ -57,9 +57,130 @@ body {
 
  /* Custom.css */
 
-/* Your variable overrides */
-$body-bg: #001;
-$body-color: #111;
+
+/* Bootstrap and its default variables */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Adjusting modal header */
+.modal-header {
+  background-color: #407cb8; /* Light gray background */
+  border-bottom: 1px solid #dee2e6; /* Gray border bottom */
+}
+
+/* Adjusting modal title */
+.modal-title {
+  color: #ffffff; /* Black title color */
+}
+
+/* Adjusting modal body */
+.modal-body {
+  padding: 1.5rem; /* Padding around modal body content */
+}
+
+/* Adjusting modal footer */
+.modal-footer {
+  justify-content: center; /* Centering modal footer buttons */
+}
+
+/* Adjusting modal button */
+.btn-secondary {
+  background-color: #6c757d; /* Gray background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+}
+
+/* Adjusting close button */
+.btn-close {
+  color: #000; /* Black close button color */
+  opacity: 1; /* Full opacity for close button */
+}
+
+/* Adjusting header */
+.header {
+  background-color: #0d6efd; /* Bootstrap primary color for header */
+  color: #fff; /* White text color */
+}
+
+/* Adjusting search input */
+.form-control-dark {
+  border-radius: 0; /* Remove border radius */
+  border: none; /* Remove border */
+}
+
+/* Adjusting main container */
+.container {
+  padding-top: 2rem; /* Top padding */
+}
+
+/* Adjusting list group */
+.list-group {
+  border: none; /* No border */
+}
+
+/* Adjusting list group item */
+.list-group-item {
+  border: none; /* No border */
+  cursor: pointer; /* Cursor pointer on hover */
+}
+
+/* styles.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+
+/* For mobile devices */
+/* @media only screen and (max-width: 600px) {
+  .modal {
+    max-width: 90%;
+  }
+}
+ */ 
+
+ /* simple.css */
+
+
 
 /* Bootstrap and its default variables */
 @import "node_modules/bootstrap/scss/bootstrap";

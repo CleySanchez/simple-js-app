@@ -22,6 +22,45 @@
     return typeList;
   }
 
+  // Function to assign colors to buttons based on types
+  function assignButtonColors() {
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => {
+      const type = button.textContent.trim();
+      switch (type) {
+        case "Water":
+          button.classList.add("btn-primary");
+          break;
+        case "Rock":
+          button.classList.add("btn-secondary");
+          break;
+        case "Grass":
+          button.classList.add("btn-success");
+          break;
+        case "Fire":
+          button.classList.add("btn-danger");
+          break;
+        case "Electric":
+          button.classList.add("btn-warning");
+          break;
+        case "Normal":
+          button.classList.add("btn-info");
+          break;
+        case "Flying":
+          button.classList.add("btn-light");
+          break;
+        case "Poison":
+          button.classList.add("btn-dark");
+          break;
+        case "Link":
+          button.classList.add("btn-link");
+          break;
+        default:
+          button.classList.add("btn-primary");
+      }
+    });
+  }
+
   let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=152";
@@ -50,7 +89,7 @@
     function addListItem(pokemon) {
       let listItem = document.createElement("li");
 
-      const button = `<button type="button" id="pok-${pokemon.name}" class="col-md-4 mb-3 btn btn-primary" data-bs-toggle="modal" data-bs-target="#pokemon-modal">
+      const button = `<button type="button" id="pok-${pokemon.name}" class="col-md-4 mb-3 btn" data-bs-toggle="modal" data-bs-target="#pokemon-modal">
                        ${pokemon.name}        
                     </button>`;
       listItem.innerHTML = button;
@@ -104,5 +143,6 @@
     pokemonRepository.getAll().forEach(function (pokemon) {
       pokemonRepository.addListItem(pokemon);
     });
+    assignButtonColors(); // Call function to assign colors after loading list
   });
 })();
