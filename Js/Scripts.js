@@ -1,13 +1,12 @@
 (function () {
   const modal = document.querySelector("#pokemon-modal");
-
   function showModal(title, text) {
-    modal.querySelector(".modal-title").innerHTML = title; // Set the title dynamically
+    const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
+    modal.querySelector(".modal-title").innerHTML = capitalizedTitle;
     modal.querySelector(".modal-body").innerHTML = text;
     modal.classList.add("show");
     modal.style.display = "block";
   }
-
   function hideModal() {
     modal.classList.remove("show");
   }
@@ -60,19 +59,15 @@
       }
     });
   }
-
   let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=152";
-
     async function add(pokemon) {
       pokemonList.push(pokemon);
     }
-
     function getAll() {
       return pokemonList;
     }
-
     async function loadDetails(pokemon) {
       let url = pokemon.detailsUrl;
       try {
@@ -85,12 +80,10 @@
         console.error(error);
       }
     }
-
     function addListItem(pokemon) {
       let listItem = document.createElement("li");
-
       const button = `<button type="button" id="pok-${pokemon.name}" class="col-md-4 mb-3 btn" data-bs-toggle="modal" data-bs-target="#pokemon-modal">
-                       ${pokemon.name}        
+                       ${pokemon.name}
                     </button>`;
       listItem.innerHTML = button;
       document.querySelector(".pokemon-list").appendChild(listItem);
@@ -100,7 +93,6 @@
           showDetails(pokemon);
         });
     }
-
     async function loadList() {
       try {
         const response = await fetch(apiUrl);
@@ -108,7 +100,7 @@
         for (const item of json.results) {
           let pokemon = {
             name: item.name,
-            detailsUrl: item.url,
+            detailsUrl: item.url
           };
           await add(pokemon);
         }
@@ -116,25 +108,24 @@
         console.error(error);
       }
     }
-
     async function showDetails(pokemon) {
       await loadDetails(pokemon);
-
       let modalContent = `
-        <img src="${pokemon.imgUrl}" alt="${pokemon.name}" class="pokemon-image">
+        <img src="${pokemon.imgUrl}" alt="${
+        pokemon.name
+      }" class="pokemon-image">
         <p>Height: ${pokemon.height}</p>
         ${showType(pokemon.types)} <!-- Display Pokemon type -->
       `;
       showModal(pokemon.name, modalContent); // Pass Pokémon name as title
     }
-
     return {
       add: add,
       getAll: getAll,
       loadList: loadList,
       loadDetails: loadDetails,
       addListItem: addListItem,
-      showDetails: showDetails,
+      showDetails: showDetails
     };
   })();
 

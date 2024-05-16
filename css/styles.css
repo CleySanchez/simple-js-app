@@ -1,96 +1,84 @@
-* { 
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    font-family:sans-serif;
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-  body {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Ensure full height of the viewport */
-  }
-  /* Modal container styles */
-  #modal-container.modal-container {
-    display: flex; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    z-index: 1000; /* Ensure modal is on top of other content */
-    overflow: auto; /* Enable scrolling when modal content exceeds viewport */
-  }
-  
-  /* Modal styles */
-  #modal.modal {
-    background-color: rgb(119, 22, 22);
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 80%;
-    margin: 10% auto; /* Center modal vertically and horizontally */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Modal content styles */
-  #modal-content.modal-content {
-    text-align: center;
-  }
-  
-  /* Close button styles */
-  button#modal.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  /* Button styles */
-  .pokemon-button {
-    background-color: #4CAF50; /* Green background color */
-    border: none; /* No border */
-    color: white; /* White text color */
-    padding: 15px 32px; /* Padding around the text */
-    text-align: center; /* Center align text */
-    text-decoration: none; /* No underline */
-    display: inline-block; /* Display as inline block */
-    font-size: 16px; /* Font size */
-    margin: 4px 2px; /* Margin between buttons */
-    cursor: pointer; /* Cursor style */
-    border-radius: 12px; /* Rounded corners */
-  }
-  
-  /* Button hover effect */
-  .pokemon-button:hover {
-    background-color: #45a049; /* Darker green background color on hover */
-  }
-  
+.pokemon-list {
+  list-style: none;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
 
-  
-  /* Button styles */
-  .pokemon-button {
-    background-color: #f0e5e4; /* Red background color */
-    color: rgb(0, 0, 0); /* White text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding around the text */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Cursor style */
-    margin-bottom: 10px; /* Add margin at the bottom for spacing */
-  }
-  
-  /* Button hover effect */
-  .pokemon-button:hover {
-    background-color: #1f0505; /* Darker red background color on hover */
-  }
+.poketitle {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(21, 21, 43);
+}
 
-   /* For mobile devices */
-   @media only screen and (max-width: 600px) {
-    .modal {
-      max-width: 90%;
-    }
-  }
+.poke {
+  display: inline-block;
+  width: calc(50% - 55px);
+
+}
+
+.pokemon-button {
+  text-align: center;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.pokemon-button:hover {
+  color: red;
+  background-color: rgba(95, 158, 160, 0.422)
+}
+
+
+
+.modal-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* .modal { */
+/*   background-color: white; */
+/*   border-radius: 5px; */
+/*   padding: 20px; */
+/*   max-width: 80%; */
+/*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+/* } */
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+
+/* For mobile devices
+@media only screen and (max-width: 600px) {
+.modal {
+  max-width: 90%;
+}
+} */
