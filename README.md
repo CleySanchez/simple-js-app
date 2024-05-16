@@ -73,6 +73,18 @@ loadList: This function loads the list of Pokémon from the PokéAPI.
 
 showDetails: This function displays the details of a Pokémon in the modal.
 
+Project Dependencies :
+
+JavaScript version: ES6 or later
+
+ESLint rules: StandardJS
+
+API Used
+
+The project uses the PokéAPI to fetch data about Pokémon. The API provides a RESTful interface to access data about Pokémon, including their names, types, abilities, moves, and images. The API is free to use and does not require any authentication. The API endpoint used in the project is https://pokeapi.co/api/v2/pokemon/?limit=151, which returns data about the first 151 Pokémon.
+
+
+
 
 Conclusion : 
 
