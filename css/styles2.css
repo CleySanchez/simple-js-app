@@ -53,13 +53,6 @@ body {
 }
 
 
-/* .modal { */
-/*   background-color: white; */
-/*   border-radius: 5px; */
-/*   padding: 20px; */
-/*   max-width: 80%; */
-/*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-/* } */
 
 .modal-close {
   position: absolute;
@@ -75,10 +68,10 @@ body {
   text-align: center;
 }
 
-
-/* For mobile devices
 @media only screen and (max-width: 600px) {
 .modal {
   max-width: 90%;
 }
-} */
+} 
+
+
