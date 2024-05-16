@@ -8,6 +8,7 @@ To get started with the application, simply open the index.html file in your web
 ////
 
 HTML Structure
+
 The HTML structure of the application is built using Bootstrap. The main elements of the HTML structure are:
 
 header: The header section contains a logo, a navigation bar, a search bar, and login/signup buttons.
@@ -19,6 +20,7 @@ script: The script section contains references to the required JavaScript files,
 ////
 
 CSS Styles
+ 
 The CSS styles for the application are defined in the styles.css file. The main styles defined in the file are:
 
 body: 
