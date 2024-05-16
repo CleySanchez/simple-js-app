@@ -77,7 +77,7 @@ let pokemonRepository = (function () {
     // Add Pokemon to the list as a button
     function addListItem(pokemon) {
         // Create a list item element
-        let listPokemon = $('<div>').addClass('pokemon-div col-9 col-md-4 col-lg-3 border m-1 rounded-lg ' + pokemon.type);
+        let listPokemon = $('<div>').addClass('pokemon-div col-9 col-md-4 col-lg-3 border m-1 ' + pokemon.type);
 
         // Create a button element 
         let button = $('<button>').addClass('pokemon-button btn d-flex justify-content-between align-items-center')
