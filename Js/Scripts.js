@@ -135,7 +135,7 @@ let pokemonRepository = (function () {
 
             // Display a message if the search value does not match any Pokemon, otherwise display the filtered Pokemon
             if (filteredPokemon.length === 0) {
-                let message = "Can't find the Pokemon you are looking for";
+                let message = "Cant find the Pokemon you are looking for";
                 $pokemonListElement.text(`\n\n\n\n\n\n${message}`);
             } else {
                 filteredPokemon.forEach(pokemon => {
@@ -177,9 +177,11 @@ let pokemonRepository = (function () {
         }
     });
     
-    // When the user clicks on the button, scroll to the top of the document
+    // When the user clicks on the button, scroll to the top of the document //
+
     $mybutton.click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+         $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
     return {
